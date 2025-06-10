@@ -36,7 +36,7 @@
   <style>
     /* GLOBAL VARIABLES & RESET */
     :root {
-      --primary-color: #333C47;
+      --primary-color: #707376;
       --secondary-color: #004080;
       --accent-color: #ff6600;
       --text-light: #fff;
@@ -52,8 +52,32 @@
 
     /* HEADER & NAVIGATION */
     header { background: var(--primary-color); box-shadow: 0 2px 8px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
-    nav { max-width: 1200px; margin: 0 auto; padding: 10px 20px; display: flex; align-items: center; justify-content: space-between; }
-    .logo img { height: 60px; width: auto; }
+    nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      height: 64px; /* fixed nav height */
+    }
+    .logo-container {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+      /* Remove padding/margin if any */
+    }
+
+    .logo-container img {
+      height: 120px; /* Make logo bigger than nav */
+      width: auto;
+      display: block;
+      /* Optional: add a drop shadow for effect */
+      /* filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1)); */
+    }
     .nav-links { list-style: none; display: flex; gap: 20px; flex-wrap: wrap; }
     .nav-links li { position: relative; }
     .nav-links a { color: var(--text-light); text-decoration: none; font-weight: 500; padding: 8px 12px; border-radius: 4px; transition: background var(--transition-speed), transform var(--transition-speed); text-transform: uppercase; letter-spacing: 0.5px; cursor: pointer; }
@@ -238,7 +262,7 @@
     <nav>
       <a href="#" class="logo">
         <div class="logo-container">
-        <img src="Images/Logo/a4i-logo.png" alt="A4I Logo">
+        <img src="Images/Logo/Final-a4i-logo.png" alt="A4I Logo">
         </div>
       </a>
       <ul class="nav-links">
