@@ -60,18 +60,8 @@
        align-items: center; 
        justify-content: space-between; 
     }
-    .logo img { height: 60px; width: auto; }
-    .logo-container {
-      width: 135px;             /* desired final width */
-      height: 45px;            /* desired final height */
-      overflow: hidden;
-    }
-    .logo-container img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;       /* fills the box, cropping whitespace */
-      object-position: center; /* keeps the logo centered */
-    }
+    .logo img { height: 60px; width: auto; display: block; }
+
     .nav-links { list-style: none; display: flex; gap: 20px; flex-wrap: wrap; }
     .nav-links li { position: relative; }
     .nav-links a { color: var(--text-light); text-decoration: none; font-weight: 500; padding: 8px 12px; border-radius: 4px; transition: background var(--transition-speed), transform var(--transition-speed); text-transform: uppercase; letter-spacing: 0.5px; cursor: pointer; }
@@ -133,12 +123,33 @@
 
     /* DESKTOP */
     @media (min-width: 769px) {
-      .hero-container { text-align: left; }
-      .logo-title-container { justify-content: flex-start; }
+      .hero-container { text-align: center; }
+      .logo-title-container { justify-content: center; }
       .hero-container h1 { font-size: 3rem; }
       .intro { font-size: 1.25rem; }
       .spotlight-photo img { max-width: 100%; height: auto; }
-      .btn { font-size: 1.125rem; padding: 14px 32px; }
+      .btn { font-size: 1.125rem; margin: 20px auto 0; }
+
+      body.nav-wrapped .nav-links a.nav-link {
+        padding: 4px 12px;
+        line-height: 1.2;
+      }
+      body.nav-wrapped .nav-links {
+        gap: 4px !important; /* shrink the space between rows */
+      }
+      body.nav-wrapped .nav-links li:hover > .dropdown-menu,
+      body.nav-wrapped .nav-links li:focus-within > .dropdown-menu {
+        display: block;
+      }
+      body.nav-wrapped .dropdown-menu li a {
+        display: block;
+        padding: 8px 16px;
+        margin: 0 8px;
+        white-space: normal;
+        font-size: 0.95rem;
+        line-height: 1.4;
+      }
+    
     }
 
     /* RESPONSIVE: tablets & small devices (≤768px) */
@@ -150,25 +161,22 @@
 
       /* 1B) Reduce the gap between stacked items */
       .nav-links {
-        /*column-gap: 20px;      /* same as desktop */
-        gap: 8px;      /* was 20px; now tighter on mobile */
+        gap: 4px;               /* small row-gap */
       }
-
-      /* 1C) Smaller link padding */
+      .nav-links li {
+        width: 100%;            /* full-width buttons */
+      }
       .nav-links a.nav-link {
         display: block;
-        width: 100%;
-        padding: 8px 16px;
+        padding: 4px 12px;      /* tiny top/bottom padding */
+        line-height: 1.2;       /* no extra leading */
+        white-space: normal;    /* allow wrap */
         text-align: left;
-        white-space: normal;
       }
-
-      /* 2) Static, full-width dropdown panel */
       .dropdown-menu {
         position: static !important;
         width: 100% !important;
         margin: 4px 0;
-        background: var(--secondary-color);
         display: none;
       }
       .nav-links li:hover > .dropdown-menu,
@@ -264,7 +272,15 @@
         box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         display: none;
     }
-      
+    
+    /* NAV-WRAPPED: tighter spacing */
+    body.nav-wrapped .nav-links {
+      gap: 4px !important;           /* shrink the space between rows */
+    }
+    body.nav-wrapped .nav-links a.nav-link {
+      padding: 4px 12px !important;  /* 4px top/bottom, 12px left/right */
+      line-height: 1.2 !important;   /* collapse any extra line height */
+    }
     body.nav-wrapped .nav-links li:hover > .dropdown-menu,
     body.nav-wrapped .nav-links li:focus-within > .dropdown-menu {
       display: block;
