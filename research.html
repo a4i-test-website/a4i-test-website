@@ -1,71 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Page title used by dynamic loader -->
   <title>Research</title>
 </head>
 <body>
-  <!-- Fragment wrapper: loader injects this into #content -->
   <div id="content">
-        <section
-          style="
-            max-width: 800px;
-            margin: 40px auto;
-            line-height: 1.6;
-            font-family: Arial, sans-serif;
-            text-align: left;
-          "
-        >
-
+    <section style="
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 32px 22px 40px 22px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 18px rgba(0,32,128,0.04);
+      font-family: 'Inter', Arial, sans-serif;
+      text-align: left;
+    ">
       <!-- Section 1: Publications -->
-      <h2 style="margin-top: 8px; margin-bottom: 4px; color: #002244;">
+      <h2 style="
+        margin: 0 0 22px 0; color: #002244;
+        display: flex; align-items: center; font-size: 2rem; font-weight: 700; gap: 0.6em; letter-spacing: -0.5px;">
+        <span style="font-size:1.25em; color:#269;">&#128218;</span> <!-- 📚 -->
         Publications
       </h2>
 
-      <ul style="margin: 0; padding-left: 20px; list-style-type: disc; margin-bottom: 16px;">
-        <!-- Publication 1 -->
-         <li style="margin-bottom: 4px;">
-          <a 
-            href="#publication-1" 
+      <!-- Introductory line -->
+      <p style="margin: 0 0 18px 24px; font-size:1rem; color:#333;">
+        These are the research publications by the A4I Partners
+      </p>
+
+      <ul style="list-style: none; margin: 0 0 36px 16px; padding: 0;">
+        <!-- New Publication 1 -->
+        <li style="margin-bottom: 22px; display: flex; align-items: flex-start; line-height: 1.7;">
+          <span style="margin-right: 0.9em; margin-top: 2px; font-size: 1.18em; color: #348feb;">&#128214;</span>
+          <a
+            href="https://arxiv.org/abs/2409.10913"
             class="nav-link"
             data-parent="Research"
             data-section="Publications"
-          >Publication-1 dated 25-April-2025</a>
+            style="font-size:1.14rem; font-weight:600; color:#004080; text-decoration:none; background:#f7fbff; border-radius:5px; padding:11px 18px 11px 14px; transition:background .18s, color .18s, box-shadow .18s; display:inline-block; line-height:1.5; box-shadow:0 0 0 rgba(0,0,0,0);"
+            target="_blank" rel="noopener noreferrer"
+          >ASHABot: An LLM-Powered Chatbot: Dated Sep 2024</a>
         </li>
-        <!-- add other publications similarly -->
+
+        <!-- New Publication 2 -->
+        <li style="margin-bottom: 22px; display: flex; align-items: flex-start; line-height: 1.7;">
+          <span style="margin-right: 0.9em; margin-top: 2px; font-size: 1.18em; color: #348feb;">&#128214;</span>
+          <a
+            href="https://dl.acm.org/doi/10.1145/3677323"
+            class="nav-link"
+            data-parent="Research"
+            data-section="Publications"
+            style="font-size:1.14rem; font-weight:600; color:#004080; text-decoration:none; background:#f7fbff; border-radius:5px; padding:11px 18px 11px 14px; transition:background .18s, color .18s, box-shadow .18s; display:inline-block; line-height:1.5; box-shadow:0 0 0 rgba(0,0,0,0);"
+            target="_blank" rel="noopener noreferrer"
+          >Shiksha SEEDS: A Voice-Based Education Platform: Dated Sep 2024</a>
+        </li>
       </ul>
 
-        <!-- Horizontal separator: small bottom gap -->
-        <hr style="border:0; border-top:1px solid #ccc; margin:12px 0 4px;">
+      <!-- Horizontal separator -->
+      <hr style="border:0; border-top:2px solid #c3c3c3; margin: 28px 0 32px 0;">
 
-        <!-- Section 2: Study Reports -->
-        <h2 style="margin:4px 0 4px; color:#002244;">
-          Study Reports
-        </h2>
+      <!-- Section 2: Study Reports -->
+      <h2 style="
+        margin: 0 0 22px 0; color: #002244;
+        display: flex; align-items: center; font-size: 2rem; font-weight: 700; gap: 0.6em; letter-spacing: -0.5px;">
+        <span style="font-size:1.18em; color:#e7a713;">&#128196;</span> <!-- 📄 -->
+        Study Reports
+      </h2>
 
-        <!-- List with a tiny top margin and a modest bottom margin -->
-        <ul style="margin:4px 0 16px; padding-left:20px; list-style-type:disc;">
-          <li style="margin-bottom:8px;">
-            <a href="reports/report-1.pdf"
-              class="nav-link"
-              data-parent="Research"
-              data-section="Reports">
-              Report-1 dated 25-April-2025
-            </a>
-          </li>
-          <li style="margin-bottom:8px;">
-            <a href="reports/report-2.pdf"
-              class="nav-link"
-              data-parent="Research"
-              data-section="Reports">
-              Report-2 dated 05-May-2025
-            </a>
-          </li>
+      <!-- New introductory line for Study Reports -->
+      <p style="margin: 0 0 18px 24px; font-size:1rem; color:#333;">
+        These are the reports prepared by the A4I Researchers
+      </p>
+
+      <ul style="list-style: none; margin: 0 0 10px 16px; padding: 0;">
+        <li style="margin-bottom: 20px; display: flex; align-items: flex-start; line-height: 1.7;">
+          <span style="margin-right: 0.9em; margin-top: 2px; font-size: 1.13em; color: #dd5400;">&#128221;</span> <!-- 📝 -->
+          <a href="reports/report-1.pdf"
+            class="nav-link"
+            data-parent="Research"
+            data-section="Reports"
+            style="font-size:1.14rem; font-weight:600; color:#004080; text-decoration:none; background:#f7fbff; border-radius:5px; padding:11px 18px 11px 14px; transition:background .18s, color .18s, box-shadow .18s; display:inline-block; line-height:1.5; box-shadow:0 0 0 rgba(0,0,0,0);"
+            target="_blank" rel="noopener noreferrer"
+          >Report-1 dated 25-April-2025</a>
+        </li>
+        <li style="margin-bottom: 20px; display: flex; align-items: flex-start; line-height: 1.7;">
+          <span style="margin-right: 0.9em; margin-top: 2px; font-size: 1.13em; color: #dd5400;">&#128221;</span>
+          <a href="reports/report-2.pdf"
+            class="nav-link"
+            data-parent="Research"
+            data-section="Reports"
+            style="font-size:1.14rem; font-weight:600; color:#004080; text-decoration:none; background:#f7fbff; border-radius:5px; padding:11px 18px 11px 14px; transition:background .18s, color .18s, box-shadow .18s; display:inline-block; line-height:1.5; box-shadow:0 0 0 rgba(0,0,0,0);"
+            target="_blank" rel="noopener noreferrer"
+          >Report-2 dated 05-May-2025</a>
+        </li>
       </ul>
-
-         <!-- add other reports similarly -->
-      </ul>
-
     </section>
   </div>
 </body>
